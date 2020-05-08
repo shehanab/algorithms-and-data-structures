@@ -12,7 +12,7 @@ public class Solution {
 
     }
 
-    int equi(int A[], int n) {
+    int equi(int[] A, int n) {
         int k, m, lsum, rsum;
         for (k = 0; k < n; ++k) {
             lsum = 0;
@@ -24,18 +24,18 @@ public class Solution {
         return -1;
     }
 
-    int equi2(int arr[], int n) {
+    int equi2(int[] arr, int n) {
         if (n == 0) return -1;
         long sum = 0;
         int i;
-        for (i = 0; i < n; i++) sum += (long) arr[i];
+        for (i = 0; i < n; i++) sum += arr[i];
 //        int sum = IntStream.of(arr).sum();
 
         long sum_left = 0;
         for (i = 0; i < n; i++) {
             long sum_right = sum - sum_left - (long) arr[i];
             if (sum_left == sum_right) return i;
-            sum_left += (long) arr[i];
+            sum_left += arr[i];
         }
         return -1;
     }

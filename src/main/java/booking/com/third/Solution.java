@@ -21,9 +21,9 @@ public class Solution {
         List<Integer> outList = new ArrayList<>();
         int sum = 0;
 
-        outList.add((Integer) numList.get(0));
+        outList.add(numList.get(0));
         for (int i = 0; i < numList.size() - 1; i++) {
-            sum = (Integer) numList.get(i + 1) - (Integer) numList.get(i);
+            sum = numList.get(i + 1) - numList.get(i);
             outList.add(sum);
         }
 
@@ -34,9 +34,9 @@ public class Solution {
         List<Integer> outList = new ArrayList<>();
         int sum = 0;
 
-        outList.add((Integer) numList.get(0));
+        outList.add(numList.get(0));
         for (int i = 0; i < numList.size() - 1; i++) {
-            sum = (Integer) numList.get(i + 1) - (Integer) numList.get(i);
+            sum = numList.get(i + 1) - numList.get(i);
             // -127 <= sum <= 127
             if (!(sum >= -127 && sum <= 127)) {
                 outList.add(-128);

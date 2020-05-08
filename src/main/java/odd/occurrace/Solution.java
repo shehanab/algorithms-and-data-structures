@@ -6,7 +6,7 @@ package odd.occurrace;
 public class Solution {
 
     public static void main(String[] args) {
-        int arr [] = {9, 3, 9, 3, 9, 7, 9};
+        int[] arr = {9, 3, 9, 3, 9, 7, 9};
 
         System.out.println(solution(arr));
     }

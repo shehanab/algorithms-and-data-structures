@@ -11,13 +11,13 @@ import java.util.stream.IntStream;
 public class Solution {
 
     public static void main(String[] args) {
-        int [] a = {2,2,9,8,1};
+        int[] a = {2, 2, 9, 8, 1};
         System.out.println(solution(a, 5));
         test(a);
 
     }
 
-    public static int solution(int A[], int N) {
+    public static int solution(int[] A, int N) {
 
         int val = 0;
         for (int i = 0; i < N; i++) {
@@ -29,7 +29,7 @@ public class Solution {
 
     }
 
-    public static void test(int A[]) {
+    public static void test(int[] A) {
 
         List<Integer> numberList = IntStream.of(A).boxed().collect(Collectors.toList());
 

@@ -5,17 +5,17 @@ package hacker.rank;
  */
 public class ArrayShift {
     public static void main(String[] args) {
-        int[] in = {1,2,3,4,5};
+        int[] in = {1, 2, 3, 4, 5};
         int[] out = arrayShift(in, 2);
-        for(int i : out)
+        for (int i : out)
             System.out.println(i);
 
     }
 
-    public static int[] arrayShift(int[] in, int shiftBy){
+    public static int[] arrayShift(int[] in, int shiftBy) {
         int[] out = new int[in.length];
 
-        for(int i = 0; i < in.length; i++){
+        for (int i = 0; i < in.length; i++) {
             int k = Math.floorMod(i + shiftBy, in.length);
             out[k] = in[i];
         }

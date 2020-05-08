@@ -8,11 +8,11 @@ import java.util.Arrays;
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int [] d = {3,5,6,7,8,4,2};
+        int[] d = {3, 5, 6, 7, 8, 4, 2};
         System.out.println(binarySearch(d, 8));
 
         // initializing unsorted int array
-        int intArr[] = {30,20,5,12,55};
+        int[] intArr = {30, 20, 5, 12, 55};
 
         // sorting array
         Arrays.sort(intArr);
@@ -20,10 +20,10 @@ public class BinarySearch {
         // entering the value to be searched
         int searchVal = 12;
 
-        int retVal = Arrays.binarySearch(intArr,searchVal);
+        int retVal = Arrays.binarySearch(intArr, searchVal);
     }
 
-    public static boolean binarySearch(int [] data, int key) {
+    public static boolean binarySearch(int[] data, int key) {
         int low = 0;
         int high = data.length - 1;
 

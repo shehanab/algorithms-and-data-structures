@@ -9,13 +9,13 @@ public class Solution {
         leftShift(60);
         rightShift(60);
 
-        System.out.println("");
+        System.out.println();
         leftShift(2);
-        System.out.println("");
+        System.out.println();
         rightShift(2);
     }
 
-    public static void leftShift(int input){
+    public static void leftShift(int input) {
         System.out.println(input);
         System.out.println(Integer.toBinaryString(input));
         int result = input << 2;
@@ -23,7 +23,7 @@ public class Solution {
         System.out.println(Integer.toBinaryString(result));
     }
 
-    public static void rightShift(int input){
+    public static void rightShift(int input) {
         System.out.println(input);
         System.out.println(Integer.toBinaryString(input));
         int result = input >> 2;
@@ -32,9 +32,9 @@ public class Solution {
     }
 
     /*
-    * Usually bitwise operations are faster than doing multiply/divide. S
-    * o if you need to  multiply a variable x by say 9, you will do (x<<3 + x)
-    * which would be a few cycles faster than (x*9).
-    * **/
+     * Usually bitwise operations are faster than doing multiply/divide. S
+     * o if you need to  multiply a variable x by say 9, you will do (x<<3 + x)
+     * which would be a few cycles faster than (x*9).
+     * **/
 
 }

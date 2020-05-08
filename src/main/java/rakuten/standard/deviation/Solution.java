@@ -6,7 +6,7 @@ package rakuten.standard.deviation;
 public class Solution {
 
     public static void main(String[] args) {
-        int [] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         double ave = getAverage(arr);
         System.out.println(ave);
 

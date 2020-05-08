@@ -16,10 +16,7 @@ public class NestedString {
             return true;
         } else if (left == '[' && right == ']') {
             return true;
-        } else if (left == '{' && right == '}') {
-            return true;
-        }
-        return false;
+        } else return left == '{' && right == '}';
     }
 
     private static int isNested(String s) {
@@ -38,7 +35,7 @@ public class NestedString {
             }
         }
 
-        if(letterStack.empty()) return 1;
+        if (letterStack.empty()) return 1;
 
         return 0;
 

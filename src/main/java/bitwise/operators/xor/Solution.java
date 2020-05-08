@@ -3,7 +3,7 @@ package bitwise.operators.xor;
 class Solution {
 
     public static void main(String[] args) {
-        int a[] = {2, 3, 1, 5};
+        int[] a = {2, 3, 1, 5};
         System.out.println(solution1(a));
     }
 

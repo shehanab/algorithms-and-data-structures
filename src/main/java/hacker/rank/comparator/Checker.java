@@ -22,10 +22,9 @@ class Checker implements Comparator<Player> {
         // Otherwise, order higher score first
         else if (a.score > b.score) {
             return -1;
-        } else if (a.score < b.score) {
+        } else {
             return 1;
         }
 
-        return 0;
     }
 }

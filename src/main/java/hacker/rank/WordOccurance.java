@@ -36,11 +36,6 @@ public class WordOccurance {
     }
 
 
-
-
-
-
-
 //
 //    public findWords(){
 //        String input = "acacabcatghhellomvnsdb";
