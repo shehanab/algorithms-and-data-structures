@@ -3,7 +3,7 @@ package cacib;
 public class EvenPairCount {
     public static void main(String[] args) {
         //int [] input = {2, 1, 5, -6, 9};
-        int input[] = { 1, 2, 3, 4, 5 };
+        int[] input = { 1, 2, 3, 4, 5 };
 
         System.out.println(evenPairCount(input));
         System.out.println(evenPairCount2(input));
