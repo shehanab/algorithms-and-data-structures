@@ -11,7 +11,7 @@ public class StringReduce {
         System.out.println(stringReduce(input3));
     }
 
-    public static String stringReduce(String s){
+    public static String stringReduce(String s) {
         String transformed = s.replace("AA", "").replace("CC", "")
                 .replace("BB", "");
         return transformed.equals(s) ? transformed : stringReduce(transformed);

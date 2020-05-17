@@ -1,10 +1,13 @@
 package cacib;
 
+import com.sun.deploy.util.StringUtils;
+
 public class CompanyNameShuffler {
 
     public static void main(String[] args) {
         int input = 123456;
         int input2 = 130;
+
 
         System.out.println(shuffle2(input));
         System.out.println(shuffle2(input2));
@@ -28,25 +31,39 @@ public class CompanyNameShuffler {
 
     }
 
-    private static int shuffle2(int num) {
+    private static int shuffle2(int A) {
 
-        String str = String.valueOf(num);
-        if (str.length() <= 1) {
-            return num;
+
+        if(A >= 0 && A <= 1000000000) {
+            return 0;
         }
 
-        char[] firstHalf = str.substring(0, str.length() / 2).toCharArray();
-        char[] secondHalf = new StringBuilder(str.substring(str.length() / 2)).reverse().toString().toCharArray();
-        StringBuilder finalStr = new StringBuilder();
-        for (int i = 0; i < firstHalf.length; i++) {
-            finalStr.append(firstHalf[i]);
-            finalStr.append(secondHalf[i]);
-        }
-        // To handle for odd numbers length of array
-        if (secondHalf.length > firstHalf.length) {
-            finalStr.append(secondHalf[secondHalf.length - 1]);
+
+        String numberString = String.valueOf(A);
+
+        // if String length is 1 or less return the original
+        if (numberString.length() <= 1) {
+            return A;
         }
 
-        return Integer.parseInt(finalStr.toString());
+        // Divided the string in to two halves
+
+        char[] frontHalf = numberString.substring(0, numberString.length() / 2).toCharArray();
+
+        // Used String builder reverse method to character sequence to be replaced by the reverse of the sequence
+        char[] rearHalf = new StringBuilder(numberString.substring(numberString.length() / 2)).reverse().toString().toCharArray();
+
+        StringBuilder shuffledName = new StringBuilder();
+        for (int i = 0; i < frontHalf.length; i++) {
+            shuffledName.append(frontHalf[i]);
+            shuffledName.append(rearHalf[i]);
+        }
+        // if the full length of the array is odd rear half should be greater than the front half
+        if (rearHalf.length > frontHalf.length) {
+            shuffledName.append(rearHalf[rearHalf.length - 1]);
+        }
+
+        return Integer.parseInt(shuffledName.toString());
     }
+    
 }

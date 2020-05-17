@@ -6,7 +6,7 @@ public class SentenceWIthMaxWordCount {
 
 
     public static void main(String[] args) {
-        String input ="We test coders. Give us a try?";
+        String input = "We test coders. Give us a try?";
 
         String input1 = "Forget CVs..Save time , x x";
 
@@ -15,7 +15,7 @@ public class SentenceWIthMaxWordCount {
     }
 
     private static int maxWordCount(String input) {
-    // https://stackoverflow.com/questions/55159951/find-the-max-number-of-words-in-java-8-fashion
+        // https://stackoverflow.com/questions/55159951/find-the-max-number-of-words-in-java-8-fashion
 
 
 /*
