@@ -1,0 +1,62 @@
+package crmslgc;
+
+public class PhoneNumberFormatter {
+
+    private static final String SEPARATOR = "-";
+
+    public static void main(String[] args) {
+        System.out.println(parse("00-44   48  5555 8361"));
+        System.out.println(parse("0 - 22 1985--324"));
+        System.out.println(parse("333 333"));
+        System.out.println(parse("333 3331"));
+        System.out.println(parse("333 33"));
+
+    }
+
+
+    public static String parse(String input) {
+        input = input.replaceAll("[^\\d.]", "");
+        int inputLength = input.length();
+
+        if (inputLength <= 3) {
+            return input;
+        } else {
+            int mod3 = inputLength % 3;
+            if (inputLength % 3 == 0) {
+                return split3(input);
+            } else if (mod3 == 1) {
+                int baseEnd = inputLength - 4;
+                String base = split3(input.substring(0, baseEnd));
+                String suffix = split2(input.substring(baseEnd, inputLength));
+                return base + "-" + suffix;
+            } else {
+                int baseEnd = inputLength - 2;
+                String base = split3(input.substring(0, baseEnd));
+                String suffix = input.substring(baseEnd, inputLength);
+                return base + "-" + suffix;
+            }
+        }
+    }
+
+    private static String split2(String input) {
+        return splitTemplate(input, 2);
+    }
+
+    private static String split3(String input) {
+        return splitTemplate(input, 3);
+    }
+
+    private static String splitTemplate(String input, int splitSize) {
+        StringBuilder result = new StringBuilder();
+        int length = input.length();
+        for (int i = 0; i < length; i += splitSize) {
+            String sub = input.substring(i, i + splitSize);
+            result.append(sub);
+            if (i != length - splitSize) {
+                result.append(SEPARATOR);
+            }
+        }
+        return result.toString();
+    }
+
+}

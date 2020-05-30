@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RandomNote2 {
+
+
+    // https://www.youtube.com/watch?v=1uIwiIjw1fw&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX&index=14
     public static void main(String[] args) {
         int result = check("We can use the valueOf(char ch) method of String class to convert a passed char ch to a String. This method accepts char as an argument and returns the string", "String");
         System.out.println(result);
@@ -99,6 +102,45 @@ public class RandomNote2 {
             }
         }
         System.out.println("Yes");
+    }
+
+
+    public static boolean canBuildRansomNote(String[] magazine, String[] note) {
+        if (note.length > magazine.length) {
+            return false;
+        }
+
+        Map<String, Integer> magazineFrequency = getStringFrequency(magazine);
+        Map<String, Integer> noteFrequency = getStringFrequency(note);
+
+        return hasEnoughString(magazineFrequency, noteFrequency);
+
+    }
+
+    private static boolean hasEnoughString(Map<String, Integer> magazineFrequency, Map<String, Integer> noteFrequency) {
+        for(Map.Entry<String, Integer> entry: noteFrequency.entrySet()){
+            String word = entry.getKey();
+            if(!magazineFrequency.containsKey(word) || magazineFrequency.get(word) < entry.getValue()){
+                return false;
+            }
+        }
+
+        return  true;
+    }
+
+    private static Map<String, Integer> getStringFrequency(String[] text) {
+        Map<String, Integer> frequencies = new HashMap<>();
+
+        for(String word : text){
+            if(!frequencies.containsKey(word)) {
+                frequencies.put(word, 0);
+            }
+
+            frequencies.put(word, frequencies.get(word) + 1);
+        }
+
+        return frequencies;
+
     }
 }
 
