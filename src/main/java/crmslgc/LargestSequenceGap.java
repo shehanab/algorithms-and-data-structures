@@ -1,5 +1,6 @@
 package crmslgc;
 
+import javax.swing.*;
 import java.util.Arrays;
 
 public class LargestSequenceGap {
@@ -9,6 +10,7 @@ public class LargestSequenceGap {
         int [] input = {10, 0, 8, 2, -1, 12, 11, 3};
 
         System.out.println(largetSequenceGap(input));
+
     }
 
     private static int largetSequenceGap(int[] input) {
