@@ -54,4 +54,56 @@ public class CarWars {
 
         return scores;
     }
+
+
+
+
+    private static int solution(String A, String B) {
+        int solution = 0;
+        char[] aChars = A.toCharArray();
+        char[] bChars = B.toCharArray();
+        for (int i = 0; i < aChars.length; i++) {
+
+            int aChar = getValue(aChars[i]);
+            int bChar = getValue(bChars[i]);
+
+            if (aChar > bChar)
+                solution += 1;
+        }
+
+        return solution;
+    }
+
+    private static int getValue(char charcter) {
+        switch (charcter) {
+            case 'A':
+                return 13;
+            case 'K':
+                return 12;
+            case 'Q':
+                return 11;
+            case 'J':
+                return 10;
+            case 'T':
+                return 9;
+            case '9':
+                return 8;
+            case '8':
+                return 7;
+            case '7':
+                return 6;
+            case '6':
+                return 5;
+            case '5':
+                return 4;
+            case '4':
+                return 3;
+            case '3':
+                return 2;
+            case '2':
+                return 1;
+        }
+
+        return 0;
+    }
 }

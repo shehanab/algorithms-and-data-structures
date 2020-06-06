@@ -10,7 +10,31 @@ public class PhoneNumberFormatter {
         System.out.println(parse("333 333"));
         System.out.println(parse("333 3331"));
         System.out.println(parse("333 33"));
+        System.out.println("---------------");
+        System.out.println(solution("00-44   48  5555 8361"));
+        System.out.println(solution("0 - 22 1985--324"));
+        System.out.println(solution("333 333"));
+        System.out.println(solution("333 3331"));
+        System.out.println(solution("333 33"));
 
+    }
+
+
+    public static String solution(String input) {
+        input = input.replaceAll("[^\\d.]", "");
+        int temp = 3;
+        int times = input.length() / 3;
+        int remains = input.length() % 3;
+        if (remains < 2) times = times - 1;
+        for (int i = 0; i < times; i++) {
+            input = input.substring(0, temp) + "-" + input.substring(temp, input.length());
+            temp += 4;
+        }
+        if (remains == 1) {
+            temp -= 1;
+            input = input.substring(0, temp) + "-" + input.substring(temp, input.length());
+        }
+        return input;
     }
 
 

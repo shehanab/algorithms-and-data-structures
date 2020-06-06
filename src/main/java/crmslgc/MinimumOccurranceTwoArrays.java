@@ -6,13 +6,13 @@ public class MinimumOccurranceTwoArrays {
 
     public static void main(String[] args) {
 
-//        int[] a = {1, 3, 2, 1};
-//        int[] b = {4, 2, 5, 3, 2};
-//        System.out.println(solution(a, b));
-
-        int[] a = {2, 1};
-        int[] b = {3, 3};
+        int[] a = {1, 3, 2, 1};
+        int[] b = {4, 2, 5, 3, 2};
         System.out.println(solution(a, b));
+
+//        int[] a = {2, 1};
+//        int[] b = {3, 3};
+//        System.out.println(solution(a, b));
     }
 
     private static int solution(int[] a, int[] b) {

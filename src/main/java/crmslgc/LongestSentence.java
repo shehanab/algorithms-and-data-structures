@@ -1,6 +1,7 @@
 package crmslgc;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class LongestSentence {
 
@@ -32,4 +33,41 @@ public class LongestSentence {
                 .orElse(0);
 
     }
+
+
+    public static int solution(String S) {
+
+        String[] sentencesplits = S.trim().split("[.?!]");
+
+        int maxwords = 0;
+        for (int i = 0; i < sentencesplits.length; i++) {
+
+            String[] wordssplits = sentencesplits[i].trim().replaceAll(" +", ".").split("[.]");
+            if (maxwords < wordssplits.length) {
+                maxwords = wordssplits.length;
+            }
+        }
+        return maxwords;
+    }
+
+    public static int solution2(String S) {
+        int maxNoOfWords = 0;
+        for (String sentence : Arrays.asList(S.split("\\.|\\?|\\!"))) {
+            int wordCount = 0;
+            List<String> words = Arrays.asList(sentence.split("\\s+"));
+            for (int i = 0; i < words.size(); i++) {
+                final String word = words.get(i);
+                if (!word.isEmpty())
+                    wordCount++;
+            }
+            if (maxNoOfWords < wordCount)
+                maxNoOfWords = wordCount;
+
+
+        }
+
+
+        return maxNoOfWords;
+    }
+
 }

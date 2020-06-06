@@ -9,6 +9,34 @@ public class BinaryPeriod {
         System.out.println(bugFix(1000));
     }
 
+    public static int solution(int n) {
+        int[] d = new int[30];
+        int l = 0;
+        int p;
+        while (n > 0) {
+            d[l] = n % 2;
+            n /= 2;
+            l++;
+        }
+        for (p = 0; p < l; p++) {
+            if (p <= l / 2) {
+                int i;
+                boolean ok = true;
+                for (i = 0; i < l - p; i++) {
+                    if (d[i] != d[i + p]) {
+                        ok = false;
+                        break;
+                    }
+                }
+                if (ok) {
+                    return p;
+                }
+            }
+        }
+        return -1;
+    }
+
+
     public static int bugFix(int n) {
         int[] d = new int[30];
         int l = 0;
@@ -36,7 +64,7 @@ public class BinaryPeriod {
         return -1;
     }
 
-    public static int solution(int N) {
+    public static int solutionBinaryPeriod(int N) {
         String binario = Integer.toBinaryString(N);
         int minimo = Integer.MAX_VALUE;
 

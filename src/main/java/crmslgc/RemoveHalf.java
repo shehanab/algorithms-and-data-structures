@@ -1,9 +1,10 @@
 package crmslgc;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class VariousCandies {
+public class RemoveHalf {
 
     public static void main(String[] args) {
 
@@ -11,19 +12,6 @@ public class VariousCandies {
         int[] input2 = {8, 8, 10, 8, 8, 8, 8, 8, 8, 12};
         System.out.println(varietyForHalf(input));
         System.out.println(varietyForHalf(input));
-
-
-    }
-
-    private static int varietyForHalf(int[] input) {
-
-        Set<Integer> variety = new HashSet<>();
-
-        for (int i : input) {
-            variety.add(i);
-        }
-
-        return Math.min(variety.size(), input.length / 2);
 
 
     }
@@ -44,5 +32,16 @@ public class VariousCandies {
 
     }
 
+    private static int varietyForHalf(int[] input) {
 
+        Set<Integer> variety = new HashSet<>();
+
+        for (int i : input) {
+            variety.add(i);
+        }
+
+        return Math.min(variety.size(), input.length / 2);
+
+
+    }
 }

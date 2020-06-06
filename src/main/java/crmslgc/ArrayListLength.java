@@ -15,6 +15,17 @@ public class ArrayListLength {
     }
 
 
+    private static int solution(int[] A) {
+        int length = 1;
+        int next = A[0];
+        while (next != -1) {
+            next = A[next];
+            length += 1;
+        }
+        return length;
+    }
+
+
     private static int findLen(int []a){
         List<Integer> arr = new ArrayList<>();
         int val = 0;
