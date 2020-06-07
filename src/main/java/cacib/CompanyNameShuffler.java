@@ -1,7 +1,5 @@
 package cacib;
 
-import com.sun.deploy.util.StringUtils;
-
 public class CompanyNameShuffler {
 
     public static void main(String[] args) {
@@ -34,7 +32,7 @@ public class CompanyNameShuffler {
     private static int shuffle2(int A) {
 
 
-        if(A >= 0 && A <= 1000000000) {
+        if (A >= 0 && A <= 1000000000) {
             return 0;
         }
 
@@ -65,5 +63,5 @@ public class CompanyNameShuffler {
 
         return Integer.parseInt(shuffledName.toString());
     }
-    
+
 }

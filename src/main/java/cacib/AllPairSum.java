@@ -19,8 +19,7 @@ public class AllPairSum {
         System.out.println(new Date());
     }
 
-    // Function to return the sum of the elements
-// of all possible pairs from the array
+    // Function to return the sum of the elements of all possible pairs from the array
     static int sumPairs(int[] arr, int n) {
 
         // To store the required sum

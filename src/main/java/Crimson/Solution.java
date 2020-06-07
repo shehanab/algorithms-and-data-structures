@@ -3,19 +3,18 @@ package Crimson;
 class Solution {
 
     public static void main(String[] args) {
-        int [] input = {6, 42, 11, 7, 1, 42};
+        int[] input = {6, 42, 11, 7, 1, 42};
         System.out.println(findIndex(9, 43, input));
 
-        int [] input2 = {13, 13, 1, 6};
+        int[] input2 = {13, 13, 1, 6};
         System.out.println(findIndex(6, 13, input2));
 
-        int [] input3 = {100, 63, 1, 6, 2, 13};
+        int[] input3 = {100, 63, 1, 6, 2, 13};
         System.out.println(findIndex(100, 63, input3));
 
-        int [] input4 = {7, 42, 5, 6, 42, 8, 7, 5, 3, 6, 7};
+        int[] input4 = {7, 42, 5, 6, 42, 8, 7, 5, 3, 6, 7};
         System.out.println(findIndex(7, 42, input4));
     }
-
 
 
     public static int solution(int X, int Y, int[] A) {
@@ -35,13 +34,12 @@ class Solution {
         return result;
     }
 
-    static int findIndex(int X, int Y, int []arr) {
+    static int findIndex(int X, int Y, int[] arr) {
         int n = arr.length;
         int nx = 0, ny = 0;
 
         int result = -1;
-        for (int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++) {
             if (arr[i] == X)
                 nx++;
             if (arr[i] == Y)

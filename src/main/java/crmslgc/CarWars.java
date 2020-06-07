@@ -56,8 +56,6 @@ public class CarWars {
     }
 
 
-
-
     private static int solution(String A, String B) {
         int solution = 0;
         char[] aChars = A.toCharArray();

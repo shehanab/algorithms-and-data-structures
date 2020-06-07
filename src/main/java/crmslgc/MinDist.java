@@ -6,8 +6,8 @@ public class MinDist {
 
     public static void main(String[] args) {
 
-        int [] input1 = {8, 24, 3, 20, 1, 17};
-        int [] input2 = {7, 21, 3, 42, 3, 7};
+        int[] input1 = {8, 24, 3, 20, 1, 17};
+        int[] input2 = {7, 21, 3, 42, 3, 7};
         System.out.println(solution(input1));
         System.out.println(solution(input2));
     }

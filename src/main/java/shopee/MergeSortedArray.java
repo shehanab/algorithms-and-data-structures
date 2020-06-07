@@ -5,13 +5,12 @@ import java.util.Arrays;
 public class MergeSortedArray {
 
     public static void main(String[] args) {
-        int [] array1 = {1, 3, 3, 4, 5, 8, 9};
-        int [] array2 = {2, 3, 6, 7, 10};
+        int[] array1 = {1, 3, 3, 4, 5, 8, 9};
+        int[] array2 = {2, 3, 6, 7, 10};
 
 
-
-        int [] result = mergeArrays(array1, array2);
-        int [] result2 = mergeArraysBetter(array1, array2);
+        int[] result = mergeArrays(array1, array2);
+        int[] result2 = mergeArraysBetter(array1, array2);
 
         printArr(result);
         printArr(result2);
@@ -43,13 +42,14 @@ public class MergeSortedArray {
 
         return arr3;
     }
-        private static int[] mergeArrays(int[] array1, int[] array2) {
+
+    private static int[] mergeArrays(int[] array1, int[] array2) {
         int[] resutl = new int[array1.length + array2.length];
-        for(int i = 0; i < array1.length; i++){
+        for (int i = 0; i < array1.length; i++) {
             resutl[i] = array1[i];
         }
 
-        for(int i = 0; i < array2.length; i++){
+        for (int i = 0; i < array2.length; i++) {
             resutl[i + array1.length] = array2[i];
         }
 

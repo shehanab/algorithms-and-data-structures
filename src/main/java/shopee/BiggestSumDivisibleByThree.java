@@ -22,8 +22,9 @@ public class BiggestSumDivisibleByThree {
      * Add all together, if sum%3==0, return sum.
      * if sum%3==1, remove the smallest number which has n%3==1.
      * if sum%3==2, remove the smallest number which has n%3==2.
-     *
+     * <p>
      * one pass, and we need to keep the smallest two numbers that have n1%3==1 and n2%3==2.
+     *
      * @param nums
      * @return
      */
@@ -44,7 +45,7 @@ public class BiggestSumDivisibleByThree {
         if (res % 3 == 1) return res - leftOne;
         return res - leftTwo;
 
-}
+    }
 
 
 }

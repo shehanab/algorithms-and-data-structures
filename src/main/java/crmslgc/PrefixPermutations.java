@@ -4,7 +4,7 @@ public class PrefixPermutations {
 
 
     public static void main(String[] args) {
-        int [] input = {2, 1, 3, 5, 4};
+        int[] input = {2, 1, 3, 5, 4};
         System.out.println(solution(input));
     }
 

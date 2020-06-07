@@ -83,7 +83,7 @@ public class BinaryPeriod {
                     fail = 1;
                 }
             }
-            System.out.println("");
+            System.out.println();
             if (fail != 1) {
                 return P;
             }

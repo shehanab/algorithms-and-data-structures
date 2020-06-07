@@ -49,11 +49,11 @@ public class MaxOnesSpan {
                 start = 0;
             } else {
                 count++;//increase count
-                if(count == 1){
+                if (count == 1) {
                     start = i;
                 }
 
-                if(count > maxCount){
+                if (count > maxCount) {
                     maxCount = count;
                     maxStart = start;
                 }
@@ -65,7 +65,7 @@ public class MaxOnesSpan {
 
     // Returns count of maximum consecutive 1's
     // in binary array arr[0..n-1]
-    static int getMaxLength(int arr[]) {
+    static int getMaxLength(int[] arr) {
 
         int count = 0; //intitialize count
         int result = 0; //initialize max
@@ -83,7 +83,7 @@ public class MaxOnesSpan {
                 count++;//increase count
 //                result = Math.max(result, count);
 
-                if(count > result){
+                if (count > result) {
                     result = count;
                 }
             }

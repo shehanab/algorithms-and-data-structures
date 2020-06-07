@@ -118,21 +118,21 @@ public class RandomNote2 {
     }
 
     private static boolean hasEnoughString(Map<String, Integer> magazineFrequency, Map<String, Integer> noteFrequency) {
-        for(Map.Entry<String, Integer> entry: noteFrequency.entrySet()){
+        for (Map.Entry<String, Integer> entry : noteFrequency.entrySet()) {
             String word = entry.getKey();
-            if(!magazineFrequency.containsKey(word) || magazineFrequency.get(word) < entry.getValue()){
+            if (!magazineFrequency.containsKey(word) || magazineFrequency.get(word) < entry.getValue()) {
                 return false;
             }
         }
 
-        return  true;
+        return true;
     }
 
     private static Map<String, Integer> getStringFrequency(String[] text) {
         Map<String, Integer> frequencies = new HashMap<>();
 
-        for(String word : text){
-            if(!frequencies.containsKey(word)) {
+        for (String word : text) {
+            if (!frequencies.containsKey(word)) {
                 frequencies.put(word, 0);
             }
 

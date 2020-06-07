@@ -27,12 +27,12 @@ public class PhoneNumberFormatter {
         int remains = input.length() % 3;
         if (remains < 2) times = times - 1;
         for (int i = 0; i < times; i++) {
-            input = input.substring(0, temp) + "-" + input.substring(temp, input.length());
+            input = input.substring(0, temp) + "-" + input.substring(temp);
             temp += 4;
         }
         if (remains == 1) {
             temp -= 1;
-            input = input.substring(0, temp) + "-" + input.substring(temp, input.length());
+            input = input.substring(0, temp) + "-" + input.substring(temp);
         }
         return input;
     }

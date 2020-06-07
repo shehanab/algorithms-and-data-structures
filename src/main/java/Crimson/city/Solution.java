@@ -10,19 +10,17 @@ public class Solution {
     public int solution2(int[] A, int[] B, int N) {
         int[] results = new int[N + 1];
         int m = A.length;
-        for(int i =0; i < m; i++) {
-            results[A[i]] +=1;
-            results[B[i]] +=1;
+        for (int i = 0; i < m; i++) {
+            results[A[i]] += 1;
+            results[B[i]] += 1;
         }
 
         int max = 0;
-        for(int i = 0; i < m; i++) {
+        for (int i = 0; i < m; i++) {
             max = Math.max(results[A[i]] + results[B[i]] - 1, max);
         }
         return max;
     }
-
-
 
 
     public int solution(int[] A, int[] B, int N) {

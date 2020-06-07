@@ -52,7 +52,7 @@ public class LongestSentence {
 
     public static int solution2(String S) {
         int maxNoOfWords = 0;
-        for (String sentence : Arrays.asList(S.split("\\.|\\?|\\!"))) {
+        for (String sentence : S.split("\\.|\\?|\\!")) {
             int wordCount = 0;
             List<String> words = Arrays.asList(sentence.split("\\s+"));
             for (int i = 0; i < words.size(); i++) {

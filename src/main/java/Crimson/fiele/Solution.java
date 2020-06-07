@@ -26,6 +26,19 @@ public class Solution {
         fileTypes.put("movies", movies);
     }
 
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        String files = "my.song.mp3 11b\n" +
+                "greatSong..flac 1000b\n" +
+                "not3.txt 5b\n" +
+                "not3.jpg 6b\n" +
+                "not3.bmp 5b\n" +
+                "video.mp4 200b\n" +
+                "game.exe 100b\n" +
+                "mov!e.mkv 10000b\n";
+        System.out.println(s.solution(files));
+    }
+
     public String solution(String s) {
 
         //List<String> files = Arrays.asList(s.split(System.getProperty("line.separator")));
@@ -68,18 +81,5 @@ public class Solution {
                         .filter(entry -> entry.getValue().contains(extension))
                         .findFirst();
         return result.isPresent() ? result.get().getKey() : "other";
-    }
-
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        String files = "my.song.mp3 11b\n" +
-                "greatSong..flac 1000b\n" +
-                "not3.txt 5b\n" +
-                "not3.jpg 6b\n" +
-                "not3.bmp 5b\n" +
-                "video.mp4 200b\n" +
-                "game.exe 100b\n" +
-                "mov!e.mkv 10000b\n";
-        System.out.println(s.solution(files));
     }
 }
