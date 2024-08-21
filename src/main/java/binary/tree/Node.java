@@ -4,6 +4,7 @@ public class Node {
     Node right;
     Node left;
     int data;
+    public int height;
 
     public Node(int data) {
         this.data = data;
