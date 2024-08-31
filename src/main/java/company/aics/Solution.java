@@ -4,7 +4,7 @@ public class Solution {
 
     // int[] nums = {-2, 1, -3, 4};
 
-    int calculateMaxSubArraySum(int[] num) {
+    public int calculateMaxSubArraySum(int[] num) {
         int maxSum = num[0];
         for (int i = 0; i <= num.length - 1; i++) {
             for (int j = i; j <= num.length - 1; j++) {
