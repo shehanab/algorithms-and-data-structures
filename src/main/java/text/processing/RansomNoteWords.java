@@ -1,10 +1,10 @@
-package visa;
+package text.processing;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RandomNote2 {
+public class RansomNoteWords {
 
 
     // https://www.youtube.com/watch?v=1uIwiIjw1fw&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX&index=14
@@ -66,42 +66,28 @@ public class RandomNote2 {
     }
 
     static void printArr(int[] arr) {
-        System.out.println("#");
-//        for(int i : arr){
-//            System.out.println(i);
-//        }
-
         System.out.println(Arrays.toString(arr));
         System.out.println("#");
 
     }
 
-    public static void ransomNote(String[] magazine, String[] ransom) {
+    public static boolean ransomNote(String[] magazine, String[] ransom) {
         if (ransom.length > magazine.length) {
-            System.out.println("No");
-            return;
+            return false;
         }
         Map<String, Integer> helper = new HashMap<>();
         for (String s : magazine) {
-            if (!helper.containsKey(s)) {
-                helper.put(s, 1);
-            } else {
-                helper.put(s, helper.get(s) + 1);
-            }
+            helper.put(s, helper.getOrDefault(s, 0) + 1);
         }
-        for (String s : ransom) {
-            if (helper.containsKey(s)) {
-                helper.put(s, helper.get(s) - 1);
-                if (helper.get(s) - 1 < 0) {
-                    System.out.println("No");
-                    return;
-                }
-            } else {
-                System.out.println("No");
-                return;
+
+        for (String c : ransom) {
+            if (!helper.containsKey(c) || helper.get(c) == 0) {
+                return false;
             }
+            helper.put(c, helper.get(c) - 1);
+
         }
-        System.out.println("Yes");
+        return true;
     }
 
 
