@@ -1,6 +1,7 @@
 package logic;
 
 import org.junit.Test;
+import sliding.window.LongestDistinctCharString;
 
 import static org.junit.Assert.*;
 
