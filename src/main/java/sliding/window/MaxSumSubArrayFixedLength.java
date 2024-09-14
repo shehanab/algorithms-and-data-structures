@@ -8,7 +8,7 @@ package sliding.window;
  * 2.	Start by calculating the sum of the first k elements.
  * 3.	Then, slide the window one element at a time, subtracting the element that is going out of the window and adding the element that is coming into the window.
  */
-public class MaxSumSubArray {
+public class MaxSumSubArrayFixedLength {
 
     public static int maxSumSubarray(int[] arr, int k) {
         int n = arr.length;
